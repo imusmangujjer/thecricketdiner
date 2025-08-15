@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Cricket Podcast Generator</title>
+
+    <!-- Quick Tailwind for now (CDN). For production, set up Tailwind via PostCSS. -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+      @keyframes acrylic-animation {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+      }
+      .acrylic-background {
+        /* Mostly black/grey/purple; ~5% dark green. */
+        background: linear-gradient(-45deg, #0a0a0a, #2d2d2d, #241b2f, #1a2d27, #241b2f, #2d2d2d, #0a0a0a);
+        background-size: 600% 600%;
+        animation: acrylic-animation 30s ease infinite;
+      }
+    </style>
+
+    <!-- If you keep a global CSS file, put it in /src and import below -->
+    <link rel="stylesheet" href="/src/index.css" />
+  </head>
+  <body class="font-sans">
+    <div id="root"></div>
+    <!-- Vite entry: make sure your file exists at /src/index.tsx -->
+    <script type="module" src="/src/index.tsx"></script>
+  </body>
+</html>
